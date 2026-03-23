@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View log.support.wizard form -->
+    <record id="view_log_support_wizard_form" model="ir.ui.view">
+        <field name="name">view.log.support.wizard.form</field>
+        <field name="model">log.support.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Log Support Wizard">
+                <sheet>
+                    <group>
+                        <field name="partner_id"/>
+                        <field name="description"/>
+                        <field name="hours_spent" widget="float_time"/>
+                    </group>
+                </sheet>
+                <footer>
+                    <button name="action_confirm" string="Confirm" type="object" class="btn-primary" data-hotkey="q"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel" data-hotkey="x"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action log.support.wizard -->
+    <record id="action_log_support_wizard" model="ir.actions.act_window">
+        <field name="name">Log Support Wizard</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">log.support.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+    </record>
+
+    <menuitem id="log_suuport_wizard_menu" name="Log Support Wizard" parent="service_wallet.wallet_transactions_menu" action="action_log_support_wizard" sequence="2"/>
+
+</odoo>
