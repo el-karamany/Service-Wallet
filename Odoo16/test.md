@@ -1,1 +1,0 @@
-odoo16 version
