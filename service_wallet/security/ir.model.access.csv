@@ -1,3 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_service_wallet_transaction_user,service_wallet_transaction_user,model_service_wallet_transaction,service_wallet.service_wallet_transaction_user,1,1,1,1
-access_log_support_wizard_user,log_support_wizard_user,model_log_support_wizard,service_wallet.service_wallet_transaction_user,1,1,1,1
